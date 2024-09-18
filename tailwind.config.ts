@@ -8,12 +8,28 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        inter: [
+          "Inter", "sans-serif",
+        ],
+      },
+      colors:{
+        primary: '#f6b149',
+        secondary: '#f8572d',
+        tertiary: '#df2a33',
+        quaternary: '#a22543',
+        quinary: '#6b312d',
+      },
+      container:{
+        center:true,
+        padding: {
+          DEFAULT: '1rem',
+          sm:'3rem',
+        },
       },
     },
   },
   plugins: [],
 };
 export default config;
+

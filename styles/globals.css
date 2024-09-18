@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .nav-menu{
+        @apply relative cursor-pointer inline-block px-4 font-semibold uppercase text-[15px] hover:text-tertiary duration-200 w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center
+    }
+
+    .nav-link-mobile{
+        @apply relative mb-[2rem] cursor-pointer w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-red-800 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center
+    }
+}
