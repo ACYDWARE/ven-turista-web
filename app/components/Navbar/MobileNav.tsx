@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import { GoXCircle } from "react-icons/go";
 
 interface Props {
@@ -16,27 +17,27 @@ const MobileNav = ({nav, closeNav}:Props) => {
         <div
         onClick={closeNav}
         className='nav-link-mobile'>
-          <a href="#">HOGAR</a>
+          <Link href={'/#'}>Hogar</Link>
         </div>
         <div
         onClick={closeNav}
         className='nav-link-mobile'>
-          <a href="#">POPULARES</a>
+          <Link href={'/#'}>Populares</Link>
         </div>
         <div
         onClick={closeNav}
         className='nav-link-mobile'>
-          <a href="#">DESTINOS</a>
+          <Link href={'/#'}>Destinos</Link>
         </div>
         <div
         onClick={closeNav}
         className='nav-link-mobile'>
-          <a href="#">BLOG</a>
+          <Link href={'/#'}>Blog</Link>
         </div>
         <div
         onClick={closeNav}
         className='nav-link-mobile'>
-          <a href="#">CONTACTO</a>
+          <Link href={'/#'}>Contacto</Link>
         </div>
       </div>
       <div 
