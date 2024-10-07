@@ -1,5 +1,5 @@
 import React from 'react'
-import DarkMode from './DarkMode'
+import DarkMode from './DarkMode';
 import { FaBars } from "react-icons/fa";
 
 interface Props {
