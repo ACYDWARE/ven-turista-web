@@ -52,9 +52,9 @@ const Navbar = ({ openNav }: Props) => {
             <div className='hidden lg:block md:mx-auto md:w-auto md:h-auto md:gap-1 md:text-[10px] '>
               <ul className='flex gap-4'>
                 {MenuNav.map((data) => <>
-                  <div className='nav-menu'>
+                  <li className='nav-menu'>
                     <Link href={data.link}>{data.name}</Link>
-                  </div>
+                  </li>
                 </>)}
                 {/* <div className='nav-menu'>
                                 <Link href={'/#'}>Hogar</Link>
