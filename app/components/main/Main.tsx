@@ -1,64 +1,71 @@
+import Image from "next/image";
+import Img1 from '../../../public/avila.jpg'
+import Img2 from '../../../public/avilaNight.jpg'
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const ImageList = [
+  {
+    id: 1,
+    img: Img1,
+    display: "w-screen h-screen darck:hidden",
+  },
+  {
+    id: 2,
+    img: Img2,
+    display: "w-screen h-screen hidden darck:block",
+  },
+]
+
 export default function Main() {
+
+  var settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: "ease-in-out",
+    pauseOnHover: false,
+    pauseOnFocus: true,
+  };
+
   return <>
     <div>
-
-      <div className='flex flex-col items-center w-[100%] h-[800px] font-inter'>
-        <div className='flex flex-col items-center absolute inset-72 bg-slate-600 w-[900px] h-[200px] left-[30%] rounded-lg ml-2'>
-          <h1 className='mb-5 mt-6 text-5xl bg-white rounded-lg w-[350px] text-center h-[60px]'>Bienvenidos</h1>
-          <div className="flex text-center">
-            <div><p className="text-white">Ubicación</p><input type="name" className='w-[200px] h-[35px] rounded-lg ml-2' placeholder="Ingresar Destino" /></div>
-            <div><p className="text-white">Fecha de Llegada</p><input type="date" className='w-[200px] h-[35px] rounded-lg ml-2' /></div>
-            <div><p className="text-white">Fecha de Salida</p><input type="date" className='w-[200px] h-[35px] rounded-lg ml-2' /></div>
-            <div><p className="text-white">Precio</p><input type="name" className='w-[100px] h-[35px] rounded-lg ml-2' placeholder="Min" /></div>
-            <div><p className="text-white">Precio</p><input type="name" className='w-[100px] h-[35px] rounded-lg ml-2' placeholder="Max" /></div>
-          </div>
-          <button>Buscar</button>
+      {/* La ventana donde el usuario introduce su destino y fecha de llegada */}
+      <div className=' flex flex-col items-center justify-center inset-72 bg-slate-600 w-[50%] h-[200px] left-[25%] rounded-3xl ml-2 absolute z-20'>
+        <h1 className='mb-5 mt-6 text-5xl p-1 bg-white rounded-lg w-[80%] text-center h-[60px] font-black'>Bienvenido a Ven-Turista!</h1>
+        <div className="flex text-center">
+          <div><p className="text-white">Ubicación</p><input type="name" className='w-[200px] h-[35px] rounded-lg ml-2' placeholder="Ingresar Destino" /></div>
+          <div><p className="text-white">Fecha de Llegada</p><input type="date" className='w-[200px] h-[35px] rounded-lg ml-2' /></div>
+          <div><p className="text-white">Fecha de Salida</p><input type="date" className='w-[200px] h-[35px] rounded-lg ml-2' /></div>
+          <div><p className="text-white">Precio</p><input type="name" className='w-[100px] h-[35px] rounded-lg ml-2' placeholder="Min" /></div>
+          <div><p className="text-white">Precio</p><input type="name" className='w-[100px] h-[35px] rounded-lg ml-2' placeholder="Max" /></div>
         </div>
-        <div className='bg-slate-600 w-[100%] flex flex-wrap mt-[100px] '>
-          <div className='box flex flex-wrap'>
-            <div className='boxA bg-amber-400'></div>
-            <div className='boxA bg-amber-400'></div>
-            <div className='boxA bg-amber-400'></div>
-            <div className='boxA bg-amber-400'></div>
-          </div>
-          <div className='box flex flex-wrap'>
-            <div className='boxB bg-red-300'></div>
-            <div className='boxB bg-red-300'></div>
-            <div className='boxB bg-red-300'></div>
-            <div className='boxB bg-red-300'></div>
-            <div className='boxB bg-red-300'></div>
-            <div className='boxB bg-red-300'></div>
-            <div className='boxB bg-red-300'></div>
-            <div className='boxB bg-red-300'></div>
-          </div>
-          <div className='box  flex flex-wrap'>
-            <div className='boxC bg-green-500'></div>
-            <div className='boxC bg-green-500'></div>
-            <div className='boxC bg-green-500'></div>
-            <div className='boxC bg-green-500'></div>
-            <div className='boxC bg-green-500'></div>
-            <div className='boxC bg-green-500'></div>
-          </div>
-          <div className='box  flex flex-wrap'>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-            <div className='boxD bg-rose-700'></div>
-          </div>
-        </div>
+        <button>Buscar</button>
       </div>
+      {/* La ventana donde el usuario introduce su destino y fecha de llegada */}
+      <div className='z-10 absolute w-[100%] h-[100%] bg-primary opacity-55 dark:bg-quinary'></div>
+      {/* carrousel*/}
+      <div className='z-0 relative'>
+        <Slider {...settings}>
+
+          {ImageList.map((data) => (
+            <div>
+              <Image
+                src={data.img}
+                alt=""
+                className={data.display}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+      {/* carrousel*/}
     </div >
   </>
 }

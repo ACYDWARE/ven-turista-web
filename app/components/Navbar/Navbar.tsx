@@ -56,21 +56,6 @@ const Navbar = ({ openNav }: Props) => {
                     <Link href={data.link}>{data.name}</Link>
                   </li>
                 </>)}
-                {/* <div className='nav-menu'>
-                                <Link href={'/#'}>Hogar</Link>
-                            </div>
-                            <div className='nav-menu'>
-                                <Link href={'/#'}>Populares</Link>
-                            </div>
-                            <div className='nav-menu'>
-                                <Link href={'/#'}>Destinos</Link>
-                            </div>
-                            <div className='nav-menu'>
-                                <Link href={'/#'}>Blog</Link>
-                            </div>
-                            <div className='nav-menu'>
-                                <Link href={'/#'}>Contacto</Link>
-                            </div> */}
               </ul>
             </div>
             {/*Login*/}

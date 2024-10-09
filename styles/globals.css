@@ -11,20 +11,4 @@
         @apply relative mb-[3rem] cursor-pointer text-[25px] text-black dark:text-white hover:text-tertiary duration-200 font-semibold w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-200 after:origin-center;
     }
 
-    
-    .box{
-        @apply w-[700px] h-[250px]
-    }
-    .boxA{
-        @apply w-[320px] h-[100px] m-3 hover:scale-110 hover:m-[14px]  transition-all duration-[0.4s] ease-out
-    }
-    .boxB{
-        @apply w-[150px] h-[100px] m-2 hover:scale-110 hover:m-[14px] transition-all duration-[0.4s] ease-out
-    }
-    .boxC{
-        @apply w-[205px] h-[100px] m-3 hover:scale-110 hover:m-[14px] transition-all duration-[0.4s] ease-out
-    }
-    .boxD{
-        @apply w-[150px] h-[40px] m-2 hover:scale-110 hover:m-[14px] transition-all duration-[0.4s] ease-out
-    }
 }
