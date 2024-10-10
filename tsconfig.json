@@ -32,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/components/buttons/Buttons.tsx"  ],
   "exclude": [
     "node_modules"
   ]
