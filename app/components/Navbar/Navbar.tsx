@@ -51,11 +51,11 @@ const Navbar = ({ openNav }: Props) => {
             {/*Menu*/}
             <div className='hidden lg:block md:mx-auto md:w-auto md:h-auto md:gap-1 md:text-[10px] '>
               <ul className='flex gap-4'>
-                {MenuNav.map((data) => <>
-                  <li className='nav-menu'>
+                {MenuNav.map((data, key) =>
+                  <li className='nav-menu' key={key}>
                     <Link href={data.link}>{data.name}</Link>
                   </li>
-                </>)}
+                )}
               </ul>
             </div>
             {/*Login*/}
