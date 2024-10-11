@@ -1,6 +1,6 @@
 import { useState } from "react";
-import MobileNav from "./navbar_fix/MobileNav";
-import Navbar from "./navbar_fix/Navbar";
+import MobileNav from "./navbar/MobileNav";
+import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
 
 export default function Layout({ children }: any) {
