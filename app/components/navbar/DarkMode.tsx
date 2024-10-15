@@ -21,7 +21,7 @@ const DarkMode = () => {
       element?.classList.remove("light");
       element?.classList.remove("dark");
     }
-  }, [theme]);
+  }, [theme, element]);
 
   return (
     <>
