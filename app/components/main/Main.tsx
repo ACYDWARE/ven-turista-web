@@ -55,14 +55,14 @@ export default function Main() {
   return <>
     <div>
       {/* La ventana donde el usuario introduce su destino y fecha de llegada */}
-      <div className=' flex flex-col items-center inset-72 bg-tertiary/75 backdrop-blur-md w-[70%] h-[200px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-3xl ml-2 absolute z-20 dark:bg-[#ac3636dd] drop-shadow-md'>
-        <h1 className='mb-5 mt-6 text-4xl p-1 bg-white rounded-lg w-[80%] text-center h-[60px] font-black dark:bg-[#6d2a2a] dark:text-white'>Bienvenido a Ven-Turista!</h1>
-        <div className="flex text-center">
-          <div><p className="text-white">Ubicación</p><input type="name" className='w-[150px] h-[35px] rounded-lg ml-2' placeholder="Ingresar Destino" /></div>
-          <div><p className="text-white">Fecha de Llegada</p><input type="date" className='w-[130px] h-[35px] rounded-lg ml-2' /></div>
-          <div><p className="text-white">Fecha de Salida</p><input type="date" className='w-[130px] h-[35px] rounded-lg ml-2' /></div>
-          <div><p className="text-white">Precio</p><input type="name" className='w-[50px] h-[35px] rounded-lg ml-2' placeholder="Min" /></div>
-          <div><p className="text-white">Precio</p><input type="name" className='w-[50px] h-[35px] rounded-lg ml-2' placeholder="Max" /></div>
+      <div className=' flex flex-col items-center inset-72 bg-tertiary/75 backdrop-blur-md w-[80%] h-[80%] top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-3xl ml-2 absolute z-20 dark:bg-[#ac3636dd] drop-shadow-md lg:h-[250px] lg:p-8'>
+        <h1 className='mb-5 mt-6 text-xl sm:text-2xl  p-1 bg-white rounded-lg w-[80%] text-center lg:text-4xl lg:h-[60px] font-black dark:bg-[#6d2a2a] dark:text-white'>Bienvenido a Ven-Turista!</h1>
+        <div className="flex w-[80%] text-center items-center flex-col lg:justify-center lg:flex-row">
+          <div><p className="text-white">Ubicación</p><input type="name" className='w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[200px]' placeholder="Ingresar Destino" /></div>
+          <div><p className="text-white">Fecha de Llegada</p><input type="date" className=' w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[200px]' /></div>
+          <div><p className="text-white">Fecha de Salida</p><input type="date" className=' w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[200px]' /></div>
+          <div><p className="text-white">Precio</p><input type="name" className='w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[50px]' placeholder="Min" /></div>
+          <div><p className="text-white">Precio</p><input type="name" className=' w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[50px]' placeholder="Max" /></div>
         </div>
         <button>Buscar</button>
       </div>

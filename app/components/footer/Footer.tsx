@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa6';
+import { FaInstagram, FaTwitter, FaX, FaXTwitter, FaYoutube } from 'react-icons/fa6';
 
 
 export const Footer = () => {
@@ -34,7 +34,7 @@ export const Footer = () => {
         <h1 className='font-light tracking-widest text-lg uppercase mx-[1rem] flex h-1/2 items-center justify-center'>Redes sociales</h1>
         <div className='h-1/2 flex flex-row items-center justify-center'>
           <a href='https://instagram.com/' target='_blank'><FaInstagram className='m-2 size-8'></FaInstagram></a>
-          <a href='https://x.com/' target='_blank'><FaTwitter className='m-2 size-8'></FaTwitter></a>
+          <a href='https://x.com/' target='_blank'><FaXTwitter className='m-2 size-8'></FaXTwitter></a>
           <a href='https://youtube.com/' target='_blank'><FaYoutube className='m-2 size-8'></FaYoutube></a>
         </div>
       </div>
