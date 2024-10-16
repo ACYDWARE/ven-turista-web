@@ -1,6 +1,6 @@
 import React from 'react'
 import DarkMode from './DarkMode';
-import { FaBars, FaRegUser } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { LoginButton } from '../buttons/Buttons';
 import Link from 'next/link';
 
