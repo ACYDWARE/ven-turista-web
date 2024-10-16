@@ -37,19 +37,21 @@ export const PlayStoreButton = () => {
 
 export const LoginButton = () => {
   return (
-    <>
-      <button className='bg-primary text-black w-16 h-16 rounded-full hover:scale-110 transition-all duration-[0.3s] border-black border-solid border-2 dark:bg-quinary dark:border-white'>
-        <FaRegUser className='inline-block text-3xl dark:text-white' />
+    <div className='md:block hidden'>
+      <button
+        className='text-gray-100 dark:text-slate-900 bg-slate-900 dark:bg-gray-100 text-[15px] px-4 py-1.5 rounded-full flex items-center gap-1 group'>
+        <span className='group-hover:block hidden transition-all duration-200'>INGRESAR</span>
+        <FaRegUser className='cursor-pointer ' />
       </button>
-    </>
+    </div>
   );
 }
 
 export const SearchButton = () => {
   return (
     <>
-      <button className='bg-primary text-black w-16 h-16 rounded-full hover:scale-110 transition-all duration-[0.3s] border-black border-solid border-2 dark:bg-quinary dark:border-white'>
-        <IoSearch className='inline-block text-3xl dark:text-white' />
+      <button className='bg-slate-900 dark:bg-gray-100 text-gray-100 dark:text-slate-900 my-2 rounded-full border-gray-100 dark:border-slate-900 border-solid border-2 px-2 py-1.5 '>
+        <IoSearch className='inline-block text-[25px]' />
       </button>
     </>
   );

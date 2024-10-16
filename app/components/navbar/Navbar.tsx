@@ -1,6 +1,7 @@
 import React from 'react'
 import DarkMode from './DarkMode';
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaRegUser } from "react-icons/fa";
+import { LoginButton } from '../buttons/Buttons';
 import Link from 'next/link';
 
 const MenuNav = [
@@ -59,10 +60,11 @@ const Navbar = ({ openNav }: Props) => {
               </ul>
             </div>
             {/*Login*/}
-            <div className='grid grid-cols-2'>
-              <button className='font-bold uppercase mx-auto my-auto bg-gray-300 dark:bg-black dark:bg-gray-gray-950 border-black dark:border-gray-100 border-[2px] rounded-full py-1 px-3 hover:scale-110 duration-200 md:block hidden'>Ingresar</button>
+            <div className='flex justify-between items-center gap-3'>
+              {/*<button className='font-bold uppercase mx-auto my-auto bg-gray-300 dark:bg-black dark:bg-gray-gray-950 border-black dark:border-gray-100 border-[2px] rounded-full py-1 px-3 hover:scale-110 duration-200 md:block hidden'>Ingresar</button>*/}
+              <LoginButton />
               {/*DarkMode Switch*/}
-              <div className='mx-auto my-auto'>
+              <div className='mx-auto my-auto gap-3'>
                 <DarkMode />
               </div>
               {/*Burguer*/}

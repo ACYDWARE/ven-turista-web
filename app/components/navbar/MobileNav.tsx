@@ -39,6 +39,11 @@ const MobileNav = ({ nav, closeNav }: Props) => {
           className='nav-link-mobile'>
           <Link href={'/#'}>Contacto</Link>
         </div>
+        <div
+          onClick={closeNav}
+          className='nav-link-mobile'>
+          <Link href={'/#'}>Ingresar</Link>
+        </div>
       </div>
       <div
         onClick={closeNav}

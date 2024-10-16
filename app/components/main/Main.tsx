@@ -8,6 +8,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from 'react';
+import { SearchButton } from "../buttons/Buttons";
 
 const ImageList = [
   {
@@ -53,10 +54,10 @@ export default function Main() {
   };
 
   return <>
-    <div>
+    <div className="font-inter">
       {/* La ventana donde el usuario introduce su destino y fecha de llegada */}
-      <div className=' flex flex-col items-center inset-72 bg-tertiary/75 backdrop-blur-md w-[80%] h-[80%] top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-3xl ml-2 absolute z-20 dark:bg-[#ac3636dd] drop-shadow-md lg:h-[250px] lg:p-8'>
-        <h1 className='mb-5 mt-6 text-xl sm:text-2xl  p-1 bg-white rounded-lg w-[80%] text-center lg:text-4xl lg:h-[60px] font-black dark:bg-[#6d2a2a] dark:text-white'>Bienvenido a Ven-Turista!</h1>
+      <div className=' flex flex-col items-center inset-72 bg-primary/70 backdrop-blur-md w-[70%] h-[55%] top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-3xl ml-2 absolute z-20 dark:bg-quinary/70 drop-shadow-md lg:h-[30%] lg:p-8'>
+        <h1 className='mb-5 mt-6 text-xl sm:text-2xl  p-1 bg-white rounded-lg w-[50%] text-center lg:text-4xl lg:h-[30%] font-black tracking-wide'>Bienvenido a Ven-Turista!</h1>
         <div className="flex w-[80%] text-center items-center flex-col lg:justify-center lg:flex-row">
           <div><p className="text-white">Ubicación</p><input type="name" className='w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[200px]' placeholder="Ingresar Destino" /></div>
           <div><p className="text-white">Fecha de Llegada</p><input type="date" className=' w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[200px]' /></div>
@@ -64,10 +65,12 @@ export default function Main() {
           <div><p className="text-white">Precio</p><input type="name" className='w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[50px]' placeholder="Min" /></div>
           <div><p className="text-white">Precio</p><input type="name" className=' w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[50px]' placeholder="Max" /></div>
         </div>
-        <button>Buscar</button>
+
+        {/*Search Button*/}
+        <SearchButton />
       </div>
       {/* La ventana donde el usuario introduce su destino y fecha de llegada */}
-      <div className='z-10 absolute w-[100%] h-[100%] bg-primary opacity-45 dark:bg-quinary'></div>
+      <div className='z-10 absolute w-[100%] h-[100%] bg-primary opacity-25 dark:bg-quinary dark:opacity-25'></div>
       {/* carrousel*/}
       <div className='z-0 relative'>
         <Slider {...settings}>
