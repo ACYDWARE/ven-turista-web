@@ -14,27 +14,27 @@ const ImageList = [
   {
     id: 1,
     img: Img1,
-    display: "w-screen h-screen darck:hidden",
+    display: "w-screen h-screen dark:hidden",
   },
   {
     id: 2,
     img: Img2,
-    display: "w-screen h-screen hidden darck:block",
+    display: "w-screen h-screen hidden dark:block",
   },
   {
     id: 3,
     img: Img3,
-    display: "w-screen h-screen hidden darck:block",
+    display: "w-screen h-screen hidden dark:block",
   },
   {
     id: 4,
     img: Img4,
-    display: "w-screen h-screen hidden darck:block",
+    display: "w-screen h-screen hidden dark:block",
   },
   {
     id: 5,
     img: Img5,
-    display: "w-screen h-screen hidden darck:block",
+    display: "w-screen h-screen hidden dark:block",
   },
 ]
 
