@@ -54,23 +54,24 @@ export default function Main() {
   };
 
   return <>
-    <div className="font-inter">
+    <div className="font-inter w-screen">
       {/* La ventana donde el usuario introduce su destino y fecha de llegada */}
-      <div className=' flex flex-col items-center inset-72 bg-primary/70 backdrop-blur-md w-[70%] h-[55%] top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-3xl ml-2 absolute z-20 dark:bg-quinary/70 drop-shadow-md lg:h-[30%] lg:p-8'>
-        <h1 className='mb-5 mt-6 text-xl sm:text-2xl  p-1 bg-white rounded-lg w-[50%] text-center lg:text-4xl lg:h-[30%] font-black tracking-wide'>Bienvenido a Ven-Turista!</h1>
-        <div className="flex w-[80%] text-center items-center flex-col lg:justify-center lg:flex-row">
-          <div><p className="text-white">Ubicación</p><input type="name" className='w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[200px]' placeholder="Ingresar Destino" /></div>
-          <div><p className="text-white">Fecha de Llegada</p><input type="date" className=' w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[200px]' /></div>
-          <div><p className="text-white">Fecha de Salida</p><input type="date" className=' w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[200px]' /></div>
-          <div><p className="text-white">Precio</p><input type="name" className='w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[50px]' placeholder="Min" /></div>
-          <div><p className="text-white">Precio</p><input type="name" className=' w-[300px] h-[35px] mb-2 rounded-lg ml-2 text-center lg:w-[50px]' placeholder="Max" /></div>
+      <div className=' flex flex-col items-center inset-72 bg-primary/70 backdrop-blur-md top-[55%] absolute z-20 dark:bg-quinary/70 drop-shadow-md rounded-3xl ml-2  
+      left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+      w-[80%] h-[340px] sm:h-[380px] lg:h-[250px] lg:p-8'>
+        <h1 className='mb-2 mt-6 text-sm sm:text-2xl p-1 bg-white rounded-lg w-[80%] text-center lg:text-4xl lg:h-[30%] font-black tracking-wide'>Bienvenido a Ven-Turista!</h1>
+        <div className="flex w-[80%] text-center text-xs lg:text-base  items-center flex-col lg:justify-center lg:flex-row">
+          <div><p className="text-white">Ubicación</p><input type="name" className=' mb-1 rounded-lg ml-2 text-center w-[150px] h-[20px] sm:w-[300px] sm:h-[25px] lg:w-[250px]' placeholder="Ingresar Destino" /></div>
+          <div><p className="text-white">Fecha de Llegada</p><input type="date" className='mb-1 rounded-lg ml-2 text-center w-[150px] h-[20px] sm:w-[300px] sm:h-[25px] lg:w-[180px]' /></div>
+          <div><p className="text-white">Fecha de Salida</p><input type="date" className='mb-1 rounded-lg ml-2 text-center w-[150px] h-[20px] sm:w-[300px] sm:h-[25px] lg:w-[180px]' /></div>
+          <div><p className="text-white">Precio</p><input type="name" className='mb-1 rounded-lg ml-2 text-center w-[150px] h-[20px] sm:w-[300px] sm:h-[25px] lg:w-[60px]' placeholder="Min" /></div>
+          <div><p className="text-white">Precio</p><input type="name" className='mb-2 lg:mb-1 rounded-lg ml-2 text-center w-[150px] h-[20px] sm:w-[300px] sm:h-[25px] lg:w-[60px]' placeholder="Max" /></div>
         </div>
 
         {/*Search Button*/}
         <SearchButton />
       </div>
-      {/* La ventana donde el usuario introduce su destino y fecha de llegada */}
-      <div className='z-10 absolute w-[100%] h-[100%] bg-primary opacity-25 dark:bg-quinary dark:opacity-25'></div>
+      <div className='z-10 absolute w-screen h-screen bg-primary opacity-25 dark:bg-quinary dark:opacity-25'></div>
       {/* carrousel*/}
       <div className='z-0 relative'>
         <Slider {...settings}>
