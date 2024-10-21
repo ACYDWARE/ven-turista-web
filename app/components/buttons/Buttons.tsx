@@ -1,4 +1,5 @@
 import { FaMoon, FaSun, FaGooglePlay, FaRegUser, FaEye } from 'react-icons/fa';
+import { FaAnglesRight } from 'react-icons/fa6';
 import { IoSearch } from 'react-icons/io5';
 
 // interface BotonesProps {
@@ -68,6 +69,19 @@ export const SeeAllButton = () => {
       </button>
     </>
   );
+}
+
+export const ReadMore = () => {
+  return (
+    <>
+      <button className='text-[10px] sm:text-[12px] md:text-[14] lg:text-[17px] text-left uppercase text-gray-950 dark:text-gray-100 font-inter font-semibold '>
+        <div className='bg-gray-100 dark:bg-gray-950 text-gray-950 dark:text-gray-100 py-2 px-4 mb-1 rounded-xl'>
+          <h1 className='inline-block '>Leer mas</h1>
+          <FaAnglesRight className='inline-block' />
+        </div>
+      </button>
+    </>
+  )
 }
 
 
