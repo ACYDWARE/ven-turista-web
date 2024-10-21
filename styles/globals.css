@@ -12,7 +12,7 @@
     }
 
     .title{
-        @apply text-[2rem] sm:text-[2rem] md:text-[3rem] lg:text-[4rem] text-center uppercase text-gray-900 dark:text-gray-100 font-inter font-bold tracking-wide my-auto pt-[3rem]
+        @apply text-[2rem] sm:text-[2rem] md:text-[3rem] lg:text-[4rem] text-center uppercase text-gray-950 dark:text-gray-100 font-inter font-bold tracking-wide py-[3rem] px-4 my-auto
     }
 
 }
