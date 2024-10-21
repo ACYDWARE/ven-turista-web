@@ -10,7 +10,6 @@ const Index = () => {
     <Popular></Popular>
     <Destinations></Destinations>
     <Blog></Blog>
-    <div className='bg-quaternary/40 w-screen h-screen'></div>
   </>
 }
 

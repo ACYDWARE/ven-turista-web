@@ -3,7 +3,7 @@ import { ReadMore, SeeAllButton } from '../buttons/Buttons'
 
 const Blog = () => {
   return (
-    <div className='bg-primary/40 dark:bg-quinary/40 w-screen h-100% dark:text-gray-100 font-inter '>
+    <div className='bg-primary/50 dark:bg-quinary/80 w-screen h-100% dark:text-gray-100 font-inter '>
       {/*Title*/}
       <div className='title'>
         <h1>Blog</h1>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaMoon, FaSun, FaGooglePlay, FaRegUser, FaEye } from 'react-icons/fa';
 import { FaAnglesRight } from 'react-icons/fa6';
 import { IoSearch } from 'react-icons/io5';
@@ -39,11 +40,11 @@ export const PlayStoreButton = () => {
 export const LoginButton = () => {
   return (
     <div className='md:block hidden'>
-      <button
+      <Link href="/login"
         className='text-gray-100 dark:text-slate-900 bg-slate-900 dark:bg-gray-100 text-[15px] px-4 py-1.5 rounded-full flex items-center gap-1 group'>
         <span className='group-hover:block hidden transition-all duration-200'>INGRESAR</span>
         <FaRegUser className='cursor-pointer ' />
-      </button>
+      </Link>
     </div>
   );
 }
