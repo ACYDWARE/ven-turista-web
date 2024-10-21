@@ -31,7 +31,7 @@ const ImageList = [
   {
     id: 5,
     img: Img5,
-    display: "w-full h-96",
+    display: "w-full h-96 ",
   },
 ]
 
@@ -46,16 +46,16 @@ const Destinations = () => {
   return (
     <div className='w-screen h-screen bg-primary/40 dark:bg-quinary/70 dark:text-gray-100 overflow-hidden items-center font-inter'>
       <h1 className='font-bold tracking-widest text-xl lg:text-5xl mx-[1rem] my-[2rem] text-center'>DESTINOS</h1>
-      <div className='w-screen h-2/3'>
-        <Slider {...settings} className='h-full'>
+      <div className='w-screen h-2/3 md:h-2'>
+        <Slider {...settings} className='rounded-xl'>
           {ImageList.map((data, key) => (
-            <div key={key} className='w-full p-8'>
+            <div key={key} className='w-10 p-20'>
               <Image
                 src={data.img}
                 alt=""
                 className={data.display}
               />
-              <div className='w-full p-8 bg-gray-100 dark:bg-black'>
+              <div className=' p-10  bg-gray-100 dark:bg-black border-solid rounded-2xl'>
                 <h1 className='text-2xl font-black tracking-wider'>Chukuto Planet</h1>
                 <br></br>
                 <p>Lido Poodle</p>
