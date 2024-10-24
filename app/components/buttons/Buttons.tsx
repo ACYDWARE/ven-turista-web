@@ -61,12 +61,12 @@ export const SearchButton = () => {
 export const SeeAllButton = () => {
   return (
     <>
-      <button className='flex rounded-md hover:scale-110 transition-all duration-[0.3s] dark:bg-quinary dark:border-white group'>
+      <button className='flex rounded-md hover:scale-110 transition-all duration-[0.3s] dark:border-white group'>
         <div className=' inline-block bg-slate-50 rounded-full w-10 h-10 mr-[-30px] mt-[-2px] z-20'>
-          <TbEyeClosed className='inline-block text-3xl mt-1 group-hover:hidden'/>
-          <FaEye className='text-3xl mt-1 hidden group-hover:inline-block ' />
+          <TbEyeClosed className='hidden sm:inline-block text-3xl mt-1 group-hover:hidden dark:text-black'/>
+          <FaEye className='text-3xl mt-1 inline-block sm:hidden group-hover:inline-block dark:text-black' />
         </div>
-        <h1 className='hidden p-1 rounded-md text-white mt-[2px] font-inter font-black text-xl group-hover:inline-block group-hover:[ bg-black w-[180px] h-[35px] ]'>VER TODO</h1>
+        <h1 className='inline-block sm:hidden p-1 rounded-md text-white mt-[2px] font-inter font-black text-xl group-hover:inline-block group-hover:[ bg-black w-[180px] h-[35px] dark:bg-quinary ]'>VER TODO</h1>
       </button>
     </>
   );

@@ -75,7 +75,7 @@ const Populares = () => {
   }, []);
 
   return (
-    <div className='font-inter w-screen h-[800px] sm:h-full sm:py-7 bg-primary/20 dark:bg-quinary/85 dark:text-gray-100 overflow-hidden flex flex-col items-center mt-[-5px]'>
+    <div className='font-inter w-screen h-[800px] sm:h-full sm:py-7 bg-primary/20 dark:bg-quinary/85 dark:text-gray-100 overflow-hidden flex flex-col items-center mt-[-6px]'>
       <h1 className='mt-8 font-bold tracking-widest text-xl lg:text-5xl mx-[1rem] mb-[1rem] text-justify'>POPULARES</h1>
       <div className='container flex flex-wrap justify-center items-center'>
         {Ranking(sitios, showAll)}
