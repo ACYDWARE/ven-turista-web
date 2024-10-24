@@ -54,7 +54,7 @@ export default function Main() {
   };
 
   return <>
-    <div className="font-inter w-screen">
+    <div className="font-inter w-full">
       {/* La ventana donde el usuario introduce su destino y fecha de llegada */}
       <div className=' flex flex-col items-center inset-72 bg-primary/70 backdrop-blur-md top-[55%] absolute z-20 dark:bg-quinary/70 drop-shadow-md rounded-3xl ml-2  
       left-1/2 transform -translate-x-1/2 -translate-y-1/2 

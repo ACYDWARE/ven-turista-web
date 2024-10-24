@@ -2,10 +2,8 @@ import Link from 'next/link';
 import { FaMoon, FaSun, FaGooglePlay, FaRegUser, FaEye } from 'react-icons/fa';
 import { FaAnglesRight } from 'react-icons/fa6';
 import { IoSearch } from 'react-icons/io5';
+import { TbEyeClosed } from "react-icons/tb";
 
-// interface BotonesProps {
-//   children: React.ReactNode;
-// }
 
 export const LightMode = () => {
   return (
@@ -58,15 +56,17 @@ export const SearchButton = () => {
     </>
   );
 }
+// group-hover:[ bg-black text-black w-[200px] h-[50px]]
 
 export const SeeAllButton = () => {
   return (
     <>
-      <button className='flex bg-black text-black w-[200px] h-[50px] rounded-md hover:scale-110 transition-all duration-[0.3s] border-black border-solid border-2 dark:bg-quinary dark:border-white'>
-        <div className=' inline-block bg-slate-50 rounded-full w-14 h-14 ml-[-30px] mt-[-5px]'>
-          <FaEye className='inline-block text-4xl mt-2' />
+      <button className='flex rounded-md hover:scale-110 transition-all duration-[0.3s] dark:bg-quinary dark:border-white group'>
+        <div className=' inline-block bg-slate-50 rounded-full w-10 h-10 mr-[-30px] mt-[-2px] z-20'>
+          <TbEyeClosed className='inline-block text-3xl mt-1 group-hover:hidden'/>
+          <FaEye className='text-3xl mt-1 hidden group-hover:inline-block ' />
         </div>
-        <h1 className='inline-block text-white ml-[30px] mt-[8px] font-inter font-black text-xl'>VER TODO</h1>
+        <h1 className='hidden p-1 rounded-md text-white mt-[2px] font-inter font-black text-xl group-hover:inline-block group-hover:[ bg-black w-[180px] h-[35px] ]'>VER TODO</h1>
       </button>
     </>
   );
@@ -85,14 +85,3 @@ export const ReadMore = () => {
   )
 }
 
-
-
-// export const Lightmode = ({ children }: BotonesProps) => {
-//   return (
-//     <>
-//       <button className='bg-black text-white w-8 h-6 '>
-//         {children}
-//       </button>
-//     </>
-//   );
-// }

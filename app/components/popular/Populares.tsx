@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { SeeAllButton } from '../buttons/Buttons';
-import { FaStar } from 'react-icons/fa6';
+import { FaStar } from 'react-icons/fa';
 import Img1 from '../../../public/imgDay1.jpg';
 import Img2 from '../../../public/imgDay2.jpg';
 import Img3 from '../../../public/imgDay3.jpg';
@@ -34,19 +34,20 @@ const sitios: Site[] = [
 const renderStars = (points: number) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
-    stars.push(i < points ? <FaStar key={i} className='text-quaternary' /> : <FaStar key={i} className='text-black' />);
+    stars.push(i < points ? <FaStar key={i} className='text-primary dark:text-quaternary' /> : <FaStar key={i} className='text-black' />);
   }
   return stars;
 };
 
 // Componente de Ranking
-const Ranking = (number: Site[]) => {
-  return number.map((item, index) => (
-    <div key={index} className="flex items-center w-[100%] sm:w-[20%]">
-      <div className='w-screen h-[150px] sm:w-[150px] mx-[50px] my-[30px] relative group cursor-pointer'>
+const Ranking = (number: Site[], showAll: boolean) => {
+  const visibleSites = showAll ? number : number.slice(0, 3);
+  return visibleSites.map((item, index) => (
+    <div key={index} className="flex items-center w-[100%] sm:w-[250px] mx-[20px]">
+      <div className='w-screen h-[150px] sm:w-[100%] sm:h-[250px] group relative cursor-pointer'>
         <Image src={item.img} alt={item.nombre} className='w-[100%] h-[80%] object-cover' />
-        <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-0 group-hover:bg-opacity-75 transition-opacity duration-500">
-          <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-black dark:bg-opacity-0  bg-opacity-0 group-hover:bg-opacity-75 transition-opacity duration-500 h-[200px]">
+          <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-xl font-black">
             {item.nombre}
           </p>
         </div>
@@ -58,11 +59,26 @@ const Ranking = (number: Site[]) => {
 
 // Componente principal
 const Populares = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowAll(window.innerWidth >= 640);
+    };
+
+    handleResize(); // Check initial width
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <div className='font-inter w-screen h-screen bg-primary/20 dark:bg-quinary/85 dark:text-gray-100 overflow-hidden flex flex-col items-center'>
+    <div className='font-inter w-screen h-[800px] sm:h-full sm:py-7 bg-primary/20 dark:bg-quinary/85 dark:text-gray-100 overflow-hidden flex flex-col items-center mt-[-5px]'>
       <h1 className='mt-8 font-bold tracking-widest text-xl lg:text-5xl mx-[1rem] mb-[1rem] text-justify'>POPULARES</h1>
-      <div className='container flex flex-wrap'>
-        {Ranking(sitios)}
+      <div className='container flex flex-wrap justify-center items-center'>
+        {Ranking(sitios, showAll)}
       </div>
       <SeeAllButton />
     </div>
