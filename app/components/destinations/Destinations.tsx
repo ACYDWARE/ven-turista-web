@@ -11,7 +11,7 @@ const ImageList = [
   {
     id: 1,
     img: Img1,
-    display: " w-full h-96 rounded-3xl object-cover sm- ",
+    display: " w-full h-96 rounded-3xl sm-w-48 sm:h-96",
   },
   {
     id: 2,
@@ -42,21 +42,40 @@ const Destinations = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
-    <div className='w-screen h-screen bg-primary/40 dark:bg-quinary/70 dark:text-gray-100 overflow-hidden items-center font-inter'>
+    // div padre
+    <div className='w-screen h-screen bg-primary/40 dark:bg-quinary/70 dark:text-gray-100 overflow-hidden items-center font-inter slider-container'>
       <h1 className='font-bold tracking-widest text-xl lg:text-5xl mx-[1rem] my-[2rem] text-center'>DESTINOS</h1>
-      <div className='w-screen h-2/3 md:h-2 '>
+      {/* div de pantalla*/}
+      <div className='w-4/5 mx-auto h-2/3 md:h-2 '>
         <Slider {...settings} className='rounded-xl'>
           {ImageList.map((data, key) => (
-            <div key={key} className='w-10 p-20 group '>
+            <div key={key} className='w-10 p-10 group '>
               <Image
                 src={data.img}
                 alt=""
                 className={data.display}
               />
               <div className='w-full h-96 p-10 relative bottom-[24rem] bg-gray-100/80 dark:bg-black border-solid rounded-3xl hidden group-hover:inline-block'>
-                <h1 className='text-2xl font-black tracking-wider'>Chukuto Planet</h1>
+                <h1 className='text-2xl font-black tracking-wider sm:w-10'>Chukuto Planet</h1>
                 <br></br>
                 <p>Lido Poodle</p>
               </div>
