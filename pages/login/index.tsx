@@ -12,7 +12,8 @@ const Login = () => {
         <div className='grid grid-cols-1 text-xl font-semibold text-center'>
           <div className='py-[4rem] '>
             <h3>Ingresar Usuario o  Correo</h3>
-            <input type="text" />
+            <br></br>
+            <input type="text" className='bg-transparent border-b-2 border-black dark:border-gray-100' />
           </div>
           <div>
             <p>Ingresar Contrasena</p>

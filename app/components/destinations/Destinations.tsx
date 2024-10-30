@@ -11,7 +11,7 @@ const ImageList = [
   {
     id: 1,
     img: Img1,
-    display: " w-full h-96 rounded-3xl sm-w-48 sm:h-96",
+    display: " w-full h-96 rounded-3xl",
   },
   {
     id: 2,
@@ -68,13 +68,13 @@ const Destinations = () => {
       <div className='w-4/5 mx-auto h-2/3 md:h-2 '>
         <Slider {...settings} className='rounded-xl'>
           {ImageList.map((data, key) => (
-            <div key={key} className='w-10 p-10 group '>
+            <div key={key} className='w-full p-10 group'>
               <Image
                 src={data.img}
                 alt=""
                 className={data.display}
               />
-              <div className='w-full h-96 p-10 relative bottom-[24rem] bg-gray-100/80 dark:bg-black border-solid rounded-3xl hidden group-hover:inline-block'>
+              <div className='w-auto h-96 absolute p-10 top-10 bottom-[24rem] bg-gray-100/80 dark:bg-black border-solid rounded-3xl hidden group-hover:inline-block'>
                 <h1 className='text-2xl font-black tracking-wider sm:w-10'>Chukuto Planet</h1>
                 <br></br>
                 <p>Lido Poodle</p>

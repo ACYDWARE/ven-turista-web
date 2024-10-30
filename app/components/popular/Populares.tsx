@@ -26,7 +26,7 @@ const sitios: Site[] = [
   { nombre: 'Rio', img: Img4, points: 2 },
   { nombre: 'Petare', img: Img5, points: 1 },
   { nombre: 'Catatumbo', img: Img7, points: 3 },
-  { nombre: 'Altamira', img: Img8, points: 5 },
+  { nombre: 'Parque central', img: Img8, points: 5 },
   { nombre: 'Montañas', img: Img9, points: 2 },
 ];
 
