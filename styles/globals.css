@@ -15,4 +15,8 @@
         @apply text-[2rem] sm:text-[2rem] md:text-[3rem] lg:text-[3.5rem] text-center uppercase text-gray-950 dark:text-gray-100 font-inter font-bold tracking-wide py-[3rem] px-4 my-auto
     }
 
+    .subtitle{
+        @apply text-[1rem] sm:text-[1.1rem] md:text-[1.6rem] lg:text-[1.8rem] text-center uppercase text-stone-700 dark:text-gray-200 font-inter font-semibold tracking-wide mx-auto my-auto
+    }
+
 }

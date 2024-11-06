@@ -63,7 +63,7 @@ export const SeeAllButton = () => {
     <>
       <button className='flex rounded-md hover:scale-110 transition-all duration-[0.3s] dark:border-white group'>
         <div className=' inline-block bg-slate-50 rounded-full w-10 h-10 mr-[-30px] mt-[-2px] z-20'>
-          <TbEyeClosed className='hidden sm:inline-block text-3xl mt-1 group-hover:hidden dark:text-black'/>
+          <TbEyeClosed className='hidden sm:inline-block text-3xl mt-1 group-hover:hidden dark:text-black' />
           <FaEye className='text-3xl mt-1 inline-block sm:hidden group-hover:inline-block dark:text-black' />
         </div>
         <h1 className='inline-block sm:hidden p-1 rounded-md text-white mt-[2px] font-inter font-black text-xl group-hover:inline-block group-hover:[ bg-black w-[180px] h-[35px] dark:bg-quinary ]'>VER TODO</h1>
@@ -79,6 +79,18 @@ export const ReadMore = () => {
         <div className='bg-gray-950 dark:bg-gray-100 text-gray-100 dark:text-gray-950 py-2 px-4 mb-1 rounded-xl'>
           <h1 className='inline-block '>Leer mas</h1>
           <FaAnglesRight className='inline-block ml-2' />
+        </div>
+      </button>
+    </>
+  )
+}
+
+export const Begin = () => {
+  return (
+    <>
+      <button className='text-[10px] sm:text-[12px] md:text-[14] lg:text-[17px] text-left uppercase text-gray-950 dark:text-gray-100 font-inter font-semibold hover:-rotate-6 transition-all duration-[0.3s] '>
+        <div className='bg-gray-950 dark:bg-gray-100 text-gray-100 dark:text-gray-950 py-2 px-4 mb-1 rounded-xl'>
+          <h1 className='inline-block '>Comencemos!</h1>
         </div>
       </button>
     </>

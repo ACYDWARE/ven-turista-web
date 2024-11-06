@@ -6,6 +6,7 @@ import Img4 from '../../../public/Destinations4.jpg'
 import Img5 from '../../../public/Destinations5.jpg'
 import Slider from 'react-slick';
 import Image from 'next/image'
+import { SeeAllButton } from '../buttons/Buttons'
 
 const ImageList = [
   {
@@ -62,8 +63,8 @@ const Destinations = () => {
   };
   return (
     // div padre
-    <div className='w-screen h-screen bg-primary/40 dark:bg-quinary/70 dark:text-gray-100 overflow-hidden items-center font-inter slider-container'>
-      <h1 className='font-bold tracking-widest text-xl lg:text-5xl mx-[1rem] my-[2rem] text-center'>DESTINOS</h1>
+    <div className='w-screen h-screen bg-gradient-to-b from-secondary to-primary dark:bg-gradient-to-b dark:from-quaternary dark:to-quinary dark:text-gray-100 overflow-hidden items-center font-inter slider-container'>
+      <h1 className='title'>DESTINOS</h1>
       {/* div de pantalla*/}
       <div className='w-4/5 mx-auto h-2/3 md:h-2 '>
         <Slider {...settings} className='rounded-xl'>
@@ -74,7 +75,7 @@ const Destinations = () => {
                 alt=""
                 className={data.display}
               />
-              <div className='w-auto h-96 absolute p-10 top-10 bottom-[24rem] bg-gray-100/80 dark:bg-black border-solid rounded-3xl hidden group-hover:inline-block'>
+              <div className='w-full h-96 absolute p-10 top-10 bottom-[24rem] bg-gray-100/80 dark:bg-black border-solid rounded-3xl hidden group-hover:inline-block'>
                 <h1 className='text-2xl font-black tracking-wider sm:w-10'>Chukuto Planet</h1>
                 <br></br>
                 <p>Lido Poodle</p>
@@ -82,6 +83,9 @@ const Destinations = () => {
             </div>
           ))}
         </Slider>
+        <div className='flex justify-center items center py-[4rem]'>
+          <SeeAllButton />
+        </div>
       </div>
     </div>
   )

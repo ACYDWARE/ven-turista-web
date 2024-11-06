@@ -5,7 +5,7 @@ import { FaInstagram, FaXTwitter, FaYoutube } from 'react-icons/fa6';
 
 export const Footer = () => {
   return (
-    <div className='lg:h-36 bg-orange-300 dark:bg-quinary dark:text-gray-100 flex flex-col lg:flex-row'>
+    <div className='lg:h-36 bg-primary/95 dark:bg-quinary dark:text-gray-100 flex flex-col lg:flex-row'>
       {/* <div className='text-xs flex w-full justify-center'> */}
       {/*  */}
       {/* <span>&copy;Copyrith {new Date().getFullYear()}</span> */}
